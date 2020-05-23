@@ -6,14 +6,14 @@ const initialState = {
 }
 
 const reducer = (state = initialState,action) => {
-    switch(action.types){
-        case actionTypes.ADD_TASK:
-            const newTask = {
-                ...action.task
-            }
+    switch(action.type){
+        case actionTypes.DO_ADD_TASK:
+            const newTasks = state.tasks.slice();
+            newTasks.push(action.task);
+         console.log("action invoked",newTasks);   
             return {
                 ...state,
-                tasks: state.tasks.concat(newTask)
+                tasks: newTasks
             }
             default:
                 return state;    
