@@ -1,13 +1,23 @@
 import React,{Component} from 'react';
-import Aux from '../../hoc/Auxiliary/Auxiliary';
-import Todos from '../../components/Todos/Todos'
+import Todos from '../../components/Todos/Todos';
+import classes from './TodoBuilder.module.css';
 
 class TodoBuilder extends Component{
+    state = {
+        working:false
+    }
+
+    startedWorkingHandler = () => {
+        console.log("startedWorkingHandler");
+        this.setState({working:true});
+    }
+
+
      render(){
          return(
-             <Aux>
-                <Todos/>
-             </Aux>
+             <div className={classes.TodoBuilder}>
+                <Todos startedWorking={this.startedWorkingHandler} hideButton={this.state.working}/>
+             </div>
          );
      }
 }

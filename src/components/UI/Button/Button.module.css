@@ -1,0 +1,43 @@
+.Button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    outline: none;
+    cursor: pointer;
+    font: inherit;
+    margin: 10px;
+    font-weight: bold;  
+}
+
+.Button:first-of-type {
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.Button:disabled{
+    color: rgb(154, 158, 149);
+    cursor: not-allowed;
+}
+
+.Success {
+    color: #5C9210;
+}
+
+.Danger {
+    color: #944317;
+}
+
+.Danger {
+    color: #944317;
+}
+
+.SmallButton{
+    padding:5px 10px;
+    box-shadow: 2px 2px 2px #095b96;
+
+}
+.BigButton {
+    padding: 15px 30px;
+    box-shadow: 2px 2px 2px #095b96;
+    font-size: 1.2em;
+}
