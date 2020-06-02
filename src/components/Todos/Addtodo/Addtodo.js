@@ -20,7 +20,8 @@ class AddtTodo extends Component {
     let newTask = {
       name:event.target.value,
       id:null,
-      done:false
+      done:false,
+      localKey:-1
     }
     this.setState({ task: newTask ,inputValue:event.target.value});
     event.target.placeholder = "";

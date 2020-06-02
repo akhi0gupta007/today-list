@@ -20,7 +20,7 @@ class TodoBuilder extends Component {
     if (this.props.tasks.length > 0) {
       taskList = Object.keys(this.props.tasks).map((key) => {
         return (
-          <TodoPanel key={key} name={this.props.tasks[key].name}></TodoPanel>
+          <TodoPanel  key={key} task={this.props.tasks[key]}></TodoPanel>
         );
       });
     }
